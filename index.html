@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul ~ Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="command-output" id="output"></div>
+
+    <div class="command-line">
+        <span class="prompt">root@server ~ $ </span>
+        <input type="text" id="command-input" class="command-input" autocomplete="off">
+    </div>
+
+    <script>
+        // Portfolio data - embedded directly to avoid CORS issues
+        const portfolioData = {
+            "userFirstName": "Gokulakrishnan",
+            "userLastName": "Rajasekaran",
+            "userHeading": "Backend Developer",
+            "userEmail": "kgokul656@gmail.com",
+            "userAddress": "Chennai",
+            "userPhoneNumber": "8825657922",
+            "awards": [
+                {
+                    "summary": "Go That Extra Mile Award - 2022"
+                },
+                {
+                    "summary": "Eccentric performer Q1 - 2022"
+                },
+                {
+                    "summary": "Won Intra college coding fest - 2019"
+                },
+                {
+                    "summary": "Won Intra college coding fest - 2018"
+                }
+            ],
+            "certifications": [
+                {
+                    "description": "Go (Intermediate) Certificate",
+                    "issuedBy": "Hackerrank",
+                    "url": "https://www.hackerrank.com/certificates/f6f3ee6c2d29"
+                },
+                {
+                    "description": "SQL (Intermediate) Certificate",
+                    "issuedBy": "Hackerrank",
+                    "url": "https://www.hackerrank.com/certificates/cbf04e6f0531"
+                }
+            ],
+            "work": [
+                {
+                    "role": "Software Engineer 2",
+                    "company": "PayPal",
+                    "startDate": "May 2022",
+                    "endDate": null,
+                    "location": "Chennai, India",
+                    "description": "Working on Identity & Access Management using Go, AWS Lambda, and microservices architecture. Implemented WASM-based solutions and Kafka event streaming."
+                },
+                {
+                    "role": "Software Engineer",
+                    "company": "PDAX (Calibraint)",
+                    "startDate": "Apr 2021",
+                    "endDate": "May 2022",
+                    "location": "Remote",
+                    "description": "Developed cryptocurrency exchange platform using Go, gRPC, and MongoDB. Built real-time trading systems and payment integrations."
+                }
+            ],
+            "skills": [
+                { "name": "Go (Golang)" },
+                { "name": "AWS (Lambda, Cognito, EKS)" },
+                { "name": "Microservices Architecture" },
+                { "name": "Kafka & Event Streaming" },
+                { "name": "Kubernetes & Docker" },
+                { "name": "MongoDB & MySQL" },
+                { "name": "Redis & Caching" },
+                { "name": "gRPC & REST APIs" },
+                { "name": "WASM & WebAssembly" },
+                { "name": "Distributed Systems" }
+            ],
+            "projects": [
+                {
+                    "name": "Cryptocurrency Exchange Platform",
+                    "description": "Built a high-performance crypto trading platform with real-time order matching",
+                    "keywords": ["Go", "gRPC", "MongoDB", "Redis"]
+                },
+                {
+                    "name": "Identity Management System",
+                    "description": "Microservices-based IAM system for PayPal using WASM and Kafka",
+                    "keywords": ["Go", "AWS Lambda", "WASM", "Kafka"]
+                }
+            ],
+            "education": [
+                {
+                    "degree": "Bachelor of Engineering in Computer Science",
+                    "institution": "Anna University",
+                    "location": "Chennai, India",
+                    "startDate": "2017",
+                    "completionDate": "2021",
+                    "scoreType": "CGPA",
+                    "score": "8.2"
+                }
+            ]
+        };
+        let dataLoaded = true;
+
+        // Commands object
+        const commands = {
+            help: () => {
+                return `
+gokul-portfolio v2.1.0-stable (build 20250802-dev) 
+arch: x86_64 | kernel: portfolio.js | uptime: ${Math.floor(Math.random() * 100)}d ${Math.floor(Math.random() * 24)}h
+gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+
+About - A simple portfolio for Gokul v1.02 (2024 Jan 02, compiled Apr 18 2025 23:20:17)
+Usage: g [arguments]
+
+Arguments:
+  about         Display system information and user profile
+  contact       Show communication endpoints (smtp, social)
+  projects      List repository artifacts and deployments  
+  skills        Enumerate technical capabilities and frameworks
+  exp           Query work history and professional timeline
+  education     Show academic credentials and certifications
+  awards        Display achievement logs and recognition events
+  certs         List professional certifications and badges
+  clear         Flush terminal buffer and reset display
+
+Report bugs to: <gokul@terminal.dev>
+`;
+            },
+
+            about: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                return `
+Name: ${portfolioData.userFirstName} ${portfolioData.userLastName}
+Role: ${portfolioData.userHeading}
+Location: ${portfolioData.userAddress}
+Email: ${portfolioData.userEmail}
+Phone: ${portfolioData.userPhoneNumber}
+
+A passionate backend developer with extensive experience in backend development,
+microservices architecture, and distributed systems. Currently working at PayPal.
+`;
+            },
+
+            contact: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                return `
+Contact Information:
+📧 Email: ${portfolioData.userEmail}
+📱 Phone: ${portfolioData.userPhoneNumber}
+📍 Location: ${portfolioData.userAddress}
+
+LinkedIn: https://linkedin.com/in/gokul656
+GitHub: https://github.com/gokul656
+`;
+            },
+
+            exp: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                if (!portfolioData.work) return 'No work experience data available.';
+
+                let output = 'Work Experience:\n\n';
+                portfolioData.work.forEach((job, index) => {
+                    if (job.role && job.company) {
+                        const endDate = job.endDate || 'Present';
+                        output += `${job.role} @ ${job.company}\n`;
+                        output += `${job.startDate} - ${endDate} | ${job.location || 'Remote'}\n`;
+                        if (job.description) {
+                            output += `${job.description.replace(/\*\*(.*?)\*\*/g, '$1')}\n`;
+                        }
+                        output += '\n';
+                    }
+                });
+                return output;
+            },
+
+            experience: () => commands.exp(),
+
+            skills: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                let output = 'Technical Skills:\n\n';
+
+                if (portfolioData.skills && portfolioData.skills.length > 0) {
+                    portfolioData.skills.forEach(skill => {
+                        if (skill.name) {
+                            output += `• ${skill.name}\n`;
+                        }
+                    });
+                } else {
+                    // Fallback skills
+                    output += `• Go (Golang)\n• AWS (Lambda, Cognito, EKS)\n• Microservices Architecture\n• Kafka & Event Streaming\n• Kubernetes & Docker\n• MongoDB & MySQL\n• Redis & Caching\n• gRPC & REST APIs\n• Distributed Systems\n• WASM & Cloud Computing\n`;
+                }
+
+                return output;
+            },
+
+            projects: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                if (!portfolioData.projects) return 'No projects data available.';
+
+                let output = 'Notable Projects:\n\n';
+                portfolioData.projects.forEach((project, index) => {
+                    if (project.name) {
+                        output += `${project.name}\n`;
+                        if (project.description) {
+                            output += `${project.description}\n`;
+                        }
+                        if (project.keywords) {
+                            output += `Tech: ${project.keywords.join(', ')}\n`;
+                        }
+                        if (project.url) {
+                            output += `🔗 ${project.url}\n`;
+                        }
+                        output += '\n';
+                    }
+                });
+                return output;
+            },
+
+            education: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                if (!portfolioData.education) return 'No education data available.';
+
+                let output = 'Education:\n\n';
+                portfolioData.education.forEach(edu => {
+                    output += `${edu.degree}\n`;
+                    output += `${edu.institution}, ${edu.location}\n`;
+                    output += `${edu.startDate} - ${edu.completionDate}\n`;
+                    output += `${edu.scoreType}: ${edu.score}\n\n`;
+                });
+                return output;
+            },
+
+            awards: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                if (!portfolioData.awards) return 'No awards data available.';
+
+                let output = 'Awards & Achievements:\n\n';
+                portfolioData.awards.forEach(award => {
+                    output += `🏆 ${award.summary}\n`;
+                });
+                return output;
+            },
+
+            certs: () => {
+                if (!dataLoaded) return 'Loading portfolio data...';
+                if (!portfolioData.certifications) return 'No certifications data available.';
+
+                let output = 'Certifications:\n\n';
+                portfolioData.certifications.forEach(cert => {
+                    output += `📜 ${cert.description}\n`;
+                    output += `   Issued by: ${cert.issuedBy}\n`;
+                    if (cert.url) {
+                        output += `   🔗 ${cert.url}\n`;
+                    }
+                    output += '\n';
+                });
+                return output;
+            },
+
+            clear: () => {
+                document.getElementById('output').innerHTML = '';
+                return '';
+            },
+
+            // Add alias for shortened commands
+            g: (args) => {
+                if (args && commands[args]) {
+                    return commands[args]();
+                }
+                return commands.help();
+            }
+        };
+
+        // Focus on input when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('command-input').focus();
+        });
+
+        // Keep focus on input and handle command history
+        let commandHistory = [];
+        let historyIndex = -1;
+
+        document.getElementById('command-input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                const commandLine = this.value.trim().toLowerCase();
+                if (commandLine) {
+                    commandHistory.unshift(commandLine);
+                    historyIndex = -1;
+
+                    // Add command to output
+                    const output = document.getElementById('output');
+                    const commandDiv = document.createElement('div');
+                    commandDiv.className = 'command-echo';
+                    commandDiv.style.color = '#A1FC60';
+                    commandDiv.textContent = `root@server ~ ${commandLine}`;
+                    output.appendChild(commandDiv);
+
+                    // Parse command and arguments
+                    const parts = commandLine.split(' ');
+                    const command = parts[0];
+                    const args = parts.slice(1).join(' ');
+
+                    // Execute command
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'command-result';
+                    resultDiv.style.color = '#ffffff';
+                    resultDiv.style.marginBottom = '15px';
+
+                    if (commands[command]) {
+                        if (command === 'g' && args) {
+                            resultDiv.textContent = commands.g(args);
+                        } else {
+                            resultDiv.textContent = commands[command]();
+                        }
+                    } else if (commandLine) {
+                        resultDiv.textContent = `Command not found: ${commandLine}. Type 'help' for available commands.`;
+                        resultDiv.style.color = '#ff4444';
+                    }
+
+                    output.appendChild(resultDiv);
+
+                    this.value = '';
+
+                    // Scroll to bottom
+                    window.scrollTo(0, document.body.scrollHeight);
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    this.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    this.value = commandHistory[historyIndex];
+                } else if (historyIndex === 0) {
+                    historyIndex = -1;
+                    this.value = '';
+                }
+            }
+        });
+
+        // Refocus input when clicking anywhere
+        document.addEventListener('click', function () {
+            document.getElementById('command-input').focus();
+        });
+    </script>
+</body>
+
+</html>

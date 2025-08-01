@@ -1,0 +1,341 @@
+{
+    "userFirstName": "Gokulakrishnan",
+    "userLastName": "Rajasekaran",
+    "userHeading": "Backend Developer",
+    "userEmail": "kgokul656@gmail.com",
+    "userAddress": "Chennai",
+    "userPhoneNumber": "8825657922",
+    "id": 94425,
+    "resumeId": 94425,
+    "uuid": "61e98b36-56c6-4921-9a54-f7edbb284f3b",
+    "templateId": 4,
+    "cvName": "Gokul's Resume Golang",
+    "inReview": false,
+    "isShared": false,
+    "updatedAfterReview": false,
+    "createdAt": "2023-04-22T14:36:54.150Z",
+    "updatedAt": "2025-07-08T06:59:07.436Z",
+    "templateUrl": "https://hackerresume-prod.s3.us-east-1.amazonaws.com/thumbnails/5252344/61e98b36-56c6-4921-9a54-f7edbb284f3b.png",
+    "activeReviewId": 0,
+    "inAiReview": false,
+    "reviewDone": false,
+    "userReviewFeedbackDone": false,
+    "awards": [
+        {
+            "id": 104370,
+            "summary": "Go That Extra Mile Award - 2022",
+            "sortOrderId": 1,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:46:28.270Z",
+            "updatedAt": "2024-10-14T06:03:31.862Z"
+        },
+        {
+            "id": 104371,
+            "summary": "Eccentric performer Q1 - 2022",
+            "sortOrderId": 2,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:47:09.226Z",
+            "updatedAt": "2024-10-14T06:03:31.862Z"
+        },
+        {
+            "id": 104372,
+            "summary": "Won Intra college coding fest - 2019",
+            "sortOrderId": 3,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:47:26.659Z",
+            "updatedAt": "2024-10-14T06:03:31.862Z"
+        },
+        {
+            "id": 104375,
+            "summary": "Won Intra college coding fest - 2018",
+            "sortOrderId": 4,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:49:11.406Z",
+            "updatedAt": "2024-10-14T06:03:31.862Z"
+        }
+    ],
+    "certifications": [
+        {
+            "id": 231585,
+            "description": "Go (Intermediate) Certificate",
+            "issuedBy": "Hackerrank",
+            "url": "https://www.hackerrank.com/certificates/f6f3ee6c2d29",
+            "sortOrderId": 0,
+            "resumeId": 94425,
+            "createdAt": "2024-02-05T11:52:38.595Z",
+            "updatedAt": "2024-02-05T11:52:38.595Z"
+        },
+        {
+            "id": 231584,
+            "description": "SQL (Intermediate) Certificate",
+            "issuedBy": "Hackerrank",
+            "url": "https://www.hackerrank.com/certificates/cbf04e6f0531",
+            "sortOrderId": 1,
+            "resumeId": 94425,
+            "createdAt": "2024-02-05T11:51:27.475Z",
+            "updatedAt": "2024-02-05T11:51:27.475Z"
+        },
+        {
+            "id": 231586,
+            "description": "Java Certficate",
+            "issuedBy": "Hackerrank",
+            "url": "https://www.hackerrank.com/certificates/d5c4d75b96c7",
+            "sortOrderId": 2,
+            "resumeId": 94425,
+            "createdAt": "2024-02-05T11:54:19.328Z",
+            "updatedAt": "2024-02-05T11:54:19.328Z"
+        }
+    ],
+    "education": [
+        {
+            "id": 116031,
+            "degree": "Electrical & Electronics Engineering",
+            "startDate": "July 2017",
+            "completionDate": "July 2021",
+            "institution": "Parisutham Institute of Technology & Science",
+            "location": "Thanjavur",
+            "score": "7.53",
+            "scoreType": "CGPA",
+            "studyType": "Bachelors",
+            "sortOrderId": 0,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:38:45.131Z",
+            "updatedAt": "2023-04-22T14:38:45.131Z"
+        }
+    ],
+    "work": [
+        {
+            "id": 467290,
+            "description": "- Working in Compliance team, building custom orchestration engine with WASM.",
+            "endDate": "",
+            "currentJob": false,
+            "role": "Software Engineer 2",
+            "location": "Chennai, India",
+            "company": "PayPal",
+            "startDate": "Feb 2025",
+            "sortOrderId": 0,
+            "resumeId": 94425,
+            "createdAt": "2025-07-08T06:57:52.763Z",
+            "updatedAt": "2025-07-08T06:58:59.559Z"
+        },
+        {
+            "id": 341953,
+            "description": "- Developed **AWS Lambda** functions to managing admin APIs, generating daily and monthly reports.\n- Implemented **AWS Cognito** for RBAC management across microservices.\n- Developed architecture and sequence diagrams for integrating **InstaPay** payment services.\n- Created the base code for migrating the payments service from Java to Go, utilizing **DDD** and **Clean architecture**.\n- Provisioned a **K8s** cluster for a distributed computing system.\n- Integrated OTEL tools such as **Grafana** and **Prometheus** for microservices monitoring.\n- Implemented distributed tracing with **Zipkin** and later migrated to **Jaeger**.\n- Solved **200+** data structures & algorithms problems in **Leetcode**.",
+            "endDate": "Jan / 2025",
+            "currentJob": false,
+            "role": "Backend Engineer",
+            "location": "Singapore ( Remote )",
+            "company": "PDAX ( Deputed by Calibraint )",
+            "startDate": "Jan / 2023",
+            "sortOrderId": 1,
+            "resumeId": 94425,
+            "createdAt": "2024-07-15T00:37:21.006Z",
+            "updatedAt": "2025-07-08T06:58:59.559Z"
+        },
+        {
+            "id": 85182,
+            "description": "\n- Developed microservice code setup from scratch for an exchange platform.\n- Implemented microservices for trading engine, maintaining user assets, and generating wallets.\n- Hands on experience in working with **REST API, gRPC, websockets** and **HLS** protocols.\n- Implemented **Kafka** queues for asynchronous communication between services and **KStreams** for aggregating data inside KSQL.\n- Optimized Kafka compression mechanisms to make them compatible to polyglot project.\n- Created a streaming service to transmit kline, ticker data, and 24-hour changes via a single socket connection, allowing subscription and unsubscription functionalities.\n- Hands-on development experience with **MySQL, MongoDB and MongoDB Time-series**.\n- Implemented caching using **Redis** for improving response time.\n- Developed Trading algorithm in **Golang**.\n- Established the testing environment for project within AWS infrastructure.\n- Developed **docker-compose** configurations for deployment purposes.\n- Implemented **DLM** for cron jobs.\n- Delivered, analyzed, and resolved technical issues and participated in the continuous enhancement of the project. Also engaged in application architecture and system design decisions.\n- Involved in requirement gathering and problem analysis.\n\n- Experience in working in **Linux** environment.\n- Led a team of developers handling end-to-end software development life cycle.  \n\n- Designed, developed, and integrated an NFT marketplace with the Kadena blockchain.\n- Parallelly worked on developing a **Custom blockchain** using Cosmos, **Go** and developed smart contracts with **Rust**.",
+            "endDate": "",
+            "currentJob": false,
+            "role": "SDE II",
+            "location": "Chennai, India",
+            "company": "Calibraint Technologies",
+            "startDate": "July 2021",
+            "sortOrderId": 2,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:40:19.222Z",
+            "updatedAt": "2025-07-08T06:58:59.559Z"
+        },
+        {
+            "id": 85187,
+            "description": "- Designed, developed, and delivered Android applications for various freelance projects.",
+            "endDate": "July 2021",
+            "currentJob": false,
+            "role": "App developer",
+            "location": "India",
+            "company": "Freelancer",
+            "startDate": "August 2020",
+            "sortOrderId": 3,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:55:56.486Z",
+            "updatedAt": "2025-07-08T06:58:59.559Z"
+        }
+    ],
+    "projects": [
+        {
+            "id": 120487,
+            "name": "Raft-consensus",
+            "description": "* The primary objective is to implement a distributed consensus system where peers elect a leader and exchange messages to maintain consistency in a distributed network",
+            "keywords": [
+                "Go, gRPC, Docker"
+            ],
+            "url": "https://github.com/gokul656/raft-consensus",
+            "sortOrderId": 0,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:50:15.620Z",
+            "updatedAt": "2023-04-22T14:50:15.620Z"
+        },
+        {
+            "id": 344860,
+            "name": "Go-Sockets",
+            "description": "* WebSocket server developed using Gorilla.\n* It includes features for subscribing and unsubscribing for individual topics.\n* Written in a way that the server could handle concurrent connections.\n* To improve performance each connection is maintained in a seperate Go-routine.\n",
+            "keywords": [
+                "Go, Websockets"
+            ],
+            "url": "https://github.com/gokul656/go-sockets",
+            "sortOrderId": 1,
+            "resumeId": 94425,
+            "createdAt": "2023-10-12T20:39:34.827Z",
+            "updatedAt": "2023-10-12T20:39:34.827Z"
+        },
+        {
+            "id": 120491,
+            "name": "Ms-Arch",
+            "description": "- Project developed to demonstrate the working of microservices.\n- It included features like MQ, proxies, service discovery, caching, etc.\n- Includes http and https support",
+            "keywords": [
+                "Java",
+                " Spring Boot",
+                " Spring Cloud",
+                " Kafka",
+                " MySQL",
+                " Redis"
+            ],
+            "url": "https://github.com/gokul656/ms-arch",
+            "sortOrderId": 2,
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:52:25.273Z",
+            "updatedAt": "2023-04-22T14:52:25.273Z"
+        }
+    ],
+    "skills": [
+        {
+            "id": 377689,
+            "skillType": "programming",
+            "skillValues": [
+                " Go",
+                "Core Java"
+            ],
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:36:54.150Z",
+            "updatedAt": "2024-07-15T00:43:49.179Z"
+        },
+        {
+            "id": 377690,
+            "skillType": "frameworks",
+            "skillValues": [
+                "Chi",
+                "Gin",
+                "Spring boot",
+                "ReactJs"
+            ],
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:36:54.150Z",
+            "updatedAt": "2024-07-15T00:43:49.179Z"
+        },
+        {
+            "id": 377691,
+            "skillType": "database",
+            "skillValues": [
+                "MySQL",
+                " MongoDB",
+                " Redis",
+                "Firebase"
+            ],
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:36:54.150Z",
+            "updatedAt": "2024-07-15T00:43:49.179Z"
+        },
+        {
+            "id": 377692,
+            "skillType": "tools",
+            "skillValues": [
+                "Git",
+                "Docker",
+                "Kubernetes",
+                "K3s",
+                "Helm charts",
+                "Kafka",
+                "AWS Lambda",
+                "Cognito",
+                "Cloudwatch",
+                "S3",
+                "EC2",
+                "ECS",
+                "Nginx",
+                "Grafana",
+                "Prometheus",
+                "Zipkin",
+                "Jeager"
+            ],
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:36:54.150Z",
+            "updatedAt": "2024-07-15T00:43:49.179Z"
+        }
+    ],
+    "links": [
+        {
+            "id": 260290,
+            "network": "Linkedin",
+            "username": "",
+            "url": "https://www.linkedin.com/in/gokulakrishnan-rajasekaran/",
+            "resumeId": 94425,
+            "createdAt": "2023-11-22T16:56:17.811Z",
+            "updatedAt": "2024-10-14T06:01:54.710Z"
+        },
+        {
+            "id": 140464,
+            "network": "GitHub",
+            "username": "",
+            "url": "https://github.com/gokul656",
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:37:36.092Z",
+            "updatedAt": "2024-10-14T06:01:54.710Z"
+        },
+        {
+            "id": 140466,
+            "network": "HackerRank",
+            "username": "",
+            "url": "https://www.hackerrank.com/gokul656",
+            "resumeId": 94425,
+            "createdAt": "2023-04-22T14:38:04.463Z",
+            "updatedAt": "2024-10-14T06:01:54.710Z"
+        },
+        {
+            "id": 424543,
+            "network": "LeetCode",
+            "username": "",
+            "url": "https://leetcode.com/gokul656/",
+            "resumeId": 94425,
+            "createdAt": "2024-10-14T06:01:50.044Z",
+            "updatedAt": "2024-10-14T06:01:54.710Z"
+        }
+    ],
+    "user": {
+        "id": 113872,
+        "uid": "5252344",
+        "name": "Gokulakrishnan (Gokul)",
+        "role": "",
+        "companyName": "",
+        "lastActiveToken": "",
+        "createdAt": "2023-04-22T14:36:38.011Z",
+        "updatedAt": "2024-07-01T14:27:59.740Z",
+        "lastNotificationCheck": "2023-08-30T16:11:45.550Z",
+        "incompleteResumeEmailCount": 0,
+        "reviewer": false,
+        "reviewCredits": 5,
+        "uploadCredits": 10,
+        "reviewOnboardingDone": false,
+        "hacker_id": "5252344",
+        "username": "gokul656",
+        "email": "kgokul656@gmail.com",
+        "secondary_emails": [],
+        "banners": {},
+        "credits": {
+            "uploadCredits": 10,
+            "reviewCredits": 5
+        },
+        "existingResume": {}
+    },
+    "userId": 113872,
+    "review": null
+}

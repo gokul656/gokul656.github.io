@@ -1,0 +1,320 @@
+/* Terminal Theme Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: #0c0c0c;
+    color: #A1FC60;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.command-line {
+    position: sticky;
+    bottom: 0;
+    background: #0c0c0c;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prompt {
+    color: #A1FC60;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.command-input {
+    background: transparent;
+    border: none;
+    color: #A1FC60;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    caret-color: #A1FC60;
+}
+
+.command-input::placeholder {
+    color: #666;
+}
+
+.command-output {
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.command-echo {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.command-response {
+    margin-bottom: 15px;
+    color: #A1FC60;
+    line-height: 1.4;
+}
+
+.command-response h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 5px;
+}
+
+.command-response .section {
+    margin-bottom: 15px;
+}
+
+.command-response .item {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.command-response .item::before {
+    content: "►";
+    position: absolute;
+    left: 0;
+    color: #ffff00;
+}
+
+.command-response .date {
+    color: #888;
+    font-size: 12px;
+}
+
+.command-response .company {
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.command-response .role {
+    color: #ffff00;
+    font-weight: 700;
+}
+
+.command-response .skill-category {
+    color: #ff9500;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.command-response .link {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+.command-response .error {
+    color: #ff4444;
+    font-weight: 700;
+}
+
+.command-response .help-command {
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.command-response .help-description {
+    color: #ccc;
+    margin-left: 20px;
+}
+
+/* Command output styles */
+.command-result {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.section-title {
+    color: #00ffff;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 5px;
+}
+
+.help-output .command {
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.about-output,
+.contact-output,
+.experience-output,
+.skills-output,
+.projects-output,
+.education-output,
+.awards-output,
+.certs-output {
+    color: #A1FC60;
+    white-space: pre-line;
+}
+
+.job-entry {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.job-title {
+    color: #ffff00;
+    font-weight: 700;
+}
+
+.company {
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.job-date {
+    color: #888;
+    display: block;
+    margin: 5px 0;
+}
+
+.highlight {
+    color: #ffff00;
+    font-weight: 700;
+}
+
+.project-entry {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.project-name {
+    color: #00ffff;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-tech {
+    color: #ff9500;
+    display: block;
+    margin-top: 5px;
+}
+
+.project-url {
+    color: #00ffff;
+    display: block;
+    margin-top: 5px;
+}
+
+.education-entry {
+    margin-bottom: 15px;
+}
+
+.degree {
+    color: #ffff00;
+    font-weight: 700;
+    display: block;
+}
+
+.cert-entry {
+    margin-bottom: 15px;
+}
+
+.cert-name {
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.error {
+    color: #ff4444;
+    font-weight: 700;
+}
+
+/* Scrollbar styling */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .terminal {
+        height: 95vh;
+    }
+
+    .ascii-art {
+        font-size: 8px;
+    }
+
+    .welcome-text p:first-child {
+        font-size: 16px;
+    }
+
+    .terminal-body {
+        padding: 15px;
+    }
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.command-input:focus::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #A1FC60;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
